@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/manFragment">
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.recyclertask.DetailFragment"
+        android:label="fragment_detaile"
+        tools:layout="@layout/fragment_detaile">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="year"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/manFragment"
+        android:name="com.example.recyclertask.ManFragment"
+        android:label="fragment_man"
+        tools:layout="@layout/fragment_man">
+        <action
+            android:id="@+id/action_manFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+</navigation>
